@@ -44,18 +44,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Access\DataHandler.cs" />
-    <Compile Include="Data Access\Model\Category.cs" />
-    <Compile Include="Data Access\Model\Client.cs" />
-    <Compile Include="Data Access\Model\Component.cs" />
-    <Compile Include="Data Access\Model\CustomException.cs" />
-    <Compile Include="Data Access\Model\Department.cs" />
-    <Compile Include="Data Access\Model\Employee.cs" />
-    <Compile Include="Data Access\Model\Invoices.cs" />
-    <Compile Include="Data Access\Model\Orders.cs" />
-    <Compile Include="Data Access\Model\Person.cs" />
-    <Compile Include="Data Access\Model\Product.cs" />
-    <Compile Include="Data Access\Model\Supplier.cs" />
-    <Compile Include="Data Access\Model\TechnicalSupport.cs" />
+    <Compile Include="Model\Calls.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Component.cs" />
+    <Compile Include="Model\CustomException.cs" />
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Invoices.cs" />
+    <Compile Include="Model\Orders.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\Schedule.cs" />
+    <Compile Include="Model\Supplier.cs" />
+    <Compile Include="Model\TechnicalSupport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

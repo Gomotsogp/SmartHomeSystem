@@ -10,35 +10,34 @@ using System.Windows.Forms;
 
 namespace SmartHomeSystem.Views
 {
-    public partial class Menu : Form
+    public partial class TechMenu : Form
     {
-        public Menu()
+        public TechMenu()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProductManagement prod = new ProductManagement();
-            prod.ShowDialog();
-       
+            //this.Hide();
+            Employees emp = new Employees();
+            emp.ShowDialog();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ClientManagement client = new ClientManagement();
-            client.ShowDialog();
-           
+            TechSupport ts = new TechSupport();
+            ts.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            TechMenu tech = new TechMenu();
-            tech.ShowDialog();
-            
+            Schedules schedules = new Schedules();
+            schedules.ShowDialog();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void TechMenu_Load(object sender, EventArgs e)
         {
 
         }

@@ -42,7 +42,7 @@ namespace SmartHomeSystem.DAL.Model
             return IsSuccess;
         }
 
-        public static bool Update(string name, string surname, int age, string cellno, string address1, string address2, string city, int postalcode, string country, int deptid, string username, string password, int id)
+        public bool Update(string name, string surname, int age, string cellno, string address1, string address2, string city, int postalcode, string country, int deptid, string username, string password, int id)
         {
             DataHandler dataHandler = new DataHandler();
             IsSuccess = dataHandler.UpdateEmployee(name, surname, age, cellno, address1, address2, city, postalcode, country,deptid,username,password, id);
@@ -50,7 +50,7 @@ namespace SmartHomeSystem.DAL.Model
             return IsSuccess;
         }
 
-        public static bool Delete(int id)
+        public bool Delete(int id)
         {
             DataHandler dataHandler = new DataHandler();
             IsSuccess = dataHandler.DeleteEmployee(id);

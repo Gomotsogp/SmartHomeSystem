@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartHomeSystem.DAL.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,35 +11,30 @@ using System.Windows.Forms;
 
 namespace SmartHomeSystem.Views
 {
-    public partial class Menu : Form
+    public partial class ProductManagement : Form
     {
-        public Menu()
+        public ProductManagement()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProductManagement prod = new ProductManagement();
+            Products prod = new Products();
             prod.ShowDialog();
-       
+            //this.Hide();
+           // this.Close();
         }
 
+      
         private void button2_Click(object sender, EventArgs e)
         {
-            ClientManagement client = new ClientManagement();
-            client.ShowDialog();
-           
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            TechMenu tech = new TechMenu();
-            tech.ShowDialog();
+            Components c = new Components();
+            c.ShowDialog();
             
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void ProductManagement_Load(object sender, EventArgs e)
         {
 
         }

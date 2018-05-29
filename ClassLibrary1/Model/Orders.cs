@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartHomeSystem.DAL.Data_Access;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace SmartHomeSystem.DAL.Model
         private Product product;
         private Client client;
         private Employee employee;
+
+        private bool isSuccess = false;
 
         public int Id { get => id; set => id = value; }
         public DateTime OrderedDate { get => orderedDate; set => orderedDate = value; }
@@ -33,6 +36,40 @@ namespace SmartHomeSystem.DAL.Model
             this.product = product;
             this.client = client;
             this.employee = employee;
+        }
+
+        public Orders()
+        {
+
+        }
+
+        public List<Orders> GetOrders()
+        {
+            DataHandler dataHandler = new DataHandler();
+            return dataHandler.GetOrders();
+        }
+        public bool Insert(DateTime ordDate, int quant, decimal price, int prodId, int clientId, int emp)
+        {
+            DataHandler dataHandler = new DataHandler();
+            isSuccess = dataHandler.CreateNewOrder(ordDate, quant, price, prodId, clientId, emp);
+
+            return isSuccess;
+        }
+
+        public bool Update(int id, int quantity, decimal price, int supplier)
+        {
+            DataHandler dataHandler = new DataHandler();
+            isSuccess = dataHandler.UpdateOrders(id, quantity, price, supplier);
+
+            return isSuccess;
+        }
+
+        public bool Delete(int id)
+        {
+            DataHandler dataHandler = new DataHandler();
+            isSuccess = dataHandler.DeleteOrders(id);
+
+            return isSuccess;
         }
     }
 }

@@ -17,11 +17,11 @@ namespace SmartHomeSystem.Views
     {
         public Login()
         {
-            Thread t = new Thread(new ThreadStart(SplashScreen));
-            t.Start();
-            Thread.Sleep(5000);
+            //Thread t = new Thread(new ThreadStart(SplashScreen));
+            //t.Start();
+            //Thread.Sleep(5000);
             InitializeComponent();
-            t.Abort();
+            //t.Abort();
 
         }
 
@@ -49,10 +49,9 @@ namespace SmartHomeSystem.Views
                     MessageBox.Show("User has logged in successfully");
 
                     Menu menu = new Menu();
-                    Login login = new Login();
-
                     menu.ShowDialog();
-                    login.Close();
+                    this.Hide();
+                    break;
                 }
                 else
                 {
